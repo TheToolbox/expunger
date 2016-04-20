@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>Criminal Record Expungement</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <main>
+        <h1>Criminal Record Expungement <small>Fill out this form to determine if you're eligible to have your criminal record expunged.</small></h1>
+
+        <form method="dialog">
+            <fieldset>
+                <label>Have you ever committed or been arrested of a crime in a State <em>outside</em> of North Carolina?</label>
+                <br>
+                <input type="radio" name="outsideNC" value="true" required id="yesOutsideNC"><label for="yesOutsideNC">Yes</label>
+                <input type="radio" name="outsideNC" value="false" required id="noOutsideNC"><label for="noOutsideNC">No</label>
+            </fieldset>
+            <fieldset>
+                <label for="arrests">Please list all crimes for which you have been arrested, regardless of whether you were convicted or not and the date and location of arrest or conviction if known.</label>
+                <textarea name="arrests" id="arrests" required></textarea>
+            </fieldset>
+            <fieldset>
+                <label>How confident are you that you understand your criminal report and have listed all crimes?</label>
+                <ul>
+                    <li><input type="radio" name="confidence" value="1" required id="confidence1"><label for="confidence1">not very sure; I require more assistance.</label></li>
+
+                    <li><input type="radio" name="confidence" value="2" required id="confidence2"><label for="confidence2">pretty sure; I might have missed something.</label></li>
+
+                    <li><input type="radio" name="confidence" value="3" required id="confidence3"><label for="confidence3">very confident; I have listed all arrests and convictions accurately.</label></li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <label for="upload">Please scan and upload your criminal record. (you can do this with your phone's camera or a scanner)</label>
+                <input id="upload" type="file" name="upload" accept="image/*">
+            </fieldset>
+            <input type="submit" id="submit" required>
+        </form>
+    </main>
+</body>
+<script async src="index.js"></script>
+
+</html>
